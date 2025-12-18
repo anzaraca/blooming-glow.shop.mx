@@ -57,7 +57,7 @@
             <option value="0">Selecciona entrega</option>
             <option value="50">Envío estándar (3-5 días) - $50</option>
             <option value="80">Envío express (1-2 días) - $80</option>
-            <option value="15">Recoger en punto medio $15</option>
+            <option value="0">Recoger en punto medio</option>
         </select>
         <label for="pago">Método de Pago:</label>
         <select id="pago" onchange="actualizarTotal()">
@@ -157,10 +157,6 @@
             }
             if (pagoSelect.value === '0') {
                 alert('Selecciona un método de pago.');
-                return;
-            }
-            if (entrega.value === '0') {
-                alert('Selecciona un método de entrega.');
                 return;
             }
             if (!nombre || !telefono || !email) {
